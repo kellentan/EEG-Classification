@@ -171,6 +171,7 @@ def get_variation(X_train_valid1, y_train_valid1):
             reach_right.append(data)
         else:
             reach_left.append(data)
+        pass
             
     avg_reach_left = np.squeeze(np.mean(np.array(reach_left), axis=0))
     avg_reach_right = np.squeeze(np.mean(np.array(reach_right), axis=0))
@@ -187,6 +188,3 @@ def get_variation(X_train_valid1, y_train_valid1):
     variations = np.var(means, axis=0)
     variations = variations.reshape((variations.shape)[0], 1, 1)
     return variations
-
-# %% Test Cell
-pass
